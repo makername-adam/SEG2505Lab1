@@ -20,7 +20,8 @@
             android:id="@+id/courrielSignTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="courriel" />
+            android:text="courriel"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/courrielSignEditText"
@@ -40,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/prenomSignTextView"
@@ -87,4 +88,5 @@
             android:layout_height="wrap_content"
             android:text="enter" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

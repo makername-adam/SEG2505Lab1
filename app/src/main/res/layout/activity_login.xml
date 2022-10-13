@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/emailUsernameEditText"
+        android:id="@+id/courrielLogEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -20,12 +20,12 @@
         app:layout_constraintVertical_bias="0.78" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/passwordLogEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnEnter"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/enterLogBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="email username"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/emailUsernameEditText"
+        app:layout_constraintBottom_toTopOf="@+id/courrielLogEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,14 +49,14 @@
         android:layout_height="wrap_content"
         android:text="password"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLogEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.93" />
 
     <Button
-        android:id="@+id/btnEnter"
+        android:id="@+id/enterLogBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter"
@@ -64,5 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.75"
+        android:onClick="logInEnter"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

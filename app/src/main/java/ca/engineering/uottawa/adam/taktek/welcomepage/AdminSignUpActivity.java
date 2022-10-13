@@ -14,20 +14,8 @@ public class AdminSignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_sign_up);
 
-        Intent gobackWelcomePage = new Intent(getApplicationContext(), MainActivity.class);
-        //Intent adminSignIntent = new Intent(getApplicationContext(), SignUpActivity.class);
-
-
-
-        Button gobackbutton = (Button) findViewById(R.id.goBackButton);
-        gobackbutton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                startActivity(gobackWelcomePage);
-            }
-
-        });
-
-
+    }
+    public void goback (View v){
+        finish();
     }
 }
