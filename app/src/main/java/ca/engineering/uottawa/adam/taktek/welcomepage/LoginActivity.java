@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         if(! username.getText().toString().isEmpty() && ! password.getText().toString().isEmpty()){
             //compare username and password to stored accounts:
 
+            //launch Welcome/homepage if comparison successful
         }else{ // One or more fields is missing
             Toast logIntoast = Toast.makeText(LoginActivity.this, "Please enter username and password", Toast.LENGTH_LONG); //.show();
             View view = logIntoast.getView();

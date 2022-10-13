@@ -46,7 +46,9 @@ public class SignUpActivity extends AppCompatActivity {
                     UserSignUp.prenom = prenomText.getText().toString();
                     UserSignUp.nom = nomText.getText().toString();
                     UserSignUp.addresse = addresseText.getText().toString();*/
-                    //save user info and launch homepage
+
+                    //save user info and launch homepage:
+
                 }else{ // one or more fields is missing:
                     //Toast.makeText(SignUpActivity.this, "Please enter all fields ", Toast.LENGTH_LONG).show();
                     Toast logIntoast = Toast.makeText(SignUpActivity.this, "Please enter all fields ", Toast.LENGTH_LONG); //.show();
