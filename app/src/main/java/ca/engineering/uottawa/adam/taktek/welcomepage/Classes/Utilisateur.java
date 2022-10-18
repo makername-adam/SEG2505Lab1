@@ -17,11 +17,12 @@ public class Utilisateur extends Account
   /**
    * Constructs a coordinate object, with a type identifier.
    */
-  public Account(String Prenom, String Nom, String Adresse)
+  public Account(String Prenom, String Nom, String Adresse, String Courriel, String Password)
   {
     this.Prenom = Prenom;
     this.Nom = Nom;
     this.Adresse=Adresse;
+    super(Courriel,Password);
   }
  
   
