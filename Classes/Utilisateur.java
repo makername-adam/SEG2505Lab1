@@ -3,8 +3,7 @@ public class Utilisateur extends Account
   //Instance variables ************************************************
 
   /**
-   * Contains C(artesian) or P(olar) to identify the type of
-   * coordinates that are being dealt with.
+   
    */
   public String Prenom;
   public String Nom;
@@ -17,11 +16,12 @@ public class Utilisateur extends Account
   /**
    * Constructs a coordinate object, with a type identifier.
    */
-  public Account(String Prenom, String Nom, String Adresse)
+  public Utilisateur(String Prenom, String Nom, String Adresse,String Courriel, String Password)
   {
     this.Prenom = Prenom;
     this.Nom = Nom;
     this.Adresse=Adresse;
+    super(Courriel,Password);
   }
  
   
