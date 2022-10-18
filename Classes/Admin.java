@@ -1,4 +1,4 @@
-public class Admin extends Utilisateur 
+public class Admin extends Account
 {
   //Instance variables ************************************************
 
