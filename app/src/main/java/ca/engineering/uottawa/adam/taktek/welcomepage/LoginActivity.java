@@ -34,9 +34,11 @@ public class LoginActivity extends AppCompatActivity {
             //compare username and password to stored accounts:
             boolean correctLogIn = AccountDB.checkLogIn(courriel, password);
             if (correctLogIn == true){
-                Toast.makeText(LoginActivity.this, "Successfull logIn", Toast.LENGTH_SHORT).show();
-//Tachfine make startActivity here for you homepage, passing the extra accountType
+                Toast.makeText(LoginActivity.this, "logIn successfull ", Toast.LENGTH_SHORT).show();
+//Tachfine make startActivity here for your homepage, passing the extra accountType
 
+            }else{
+                Toast.makeText(LoginActivity.this, "logIn failed", Toast.LENGTH_SHORT).show();
             }
 
             //launch Welcome/homepage if comparison successful
