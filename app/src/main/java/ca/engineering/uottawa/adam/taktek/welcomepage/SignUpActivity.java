@@ -20,6 +20,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+
         AccountDB = new AccountDBsql(this);
         //Utilisateur UserSignUp
         if(getIntent().hasExtra("accountType")){
