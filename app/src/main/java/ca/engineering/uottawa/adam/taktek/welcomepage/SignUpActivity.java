@@ -22,6 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         AccountDB = new AccountDBsql(this);
+
         //Utilisateur UserSignUp
         if(getIntent().hasExtra("accountType")){
             accountType = getIntent().getExtras().getString("accountType");
