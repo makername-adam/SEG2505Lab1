@@ -1,3 +1,5 @@
+package ca.engineering.uottawa.adam.taktek.welcomepage.Classes;
+
 import android.accounts.Account;
 
 public class Utilisateur extends Account

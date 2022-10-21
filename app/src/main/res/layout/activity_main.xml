@@ -7,6 +7,17 @@
     android:background="@color/gray"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="333dp"
+        android:layout_height="43dp"
+        android:text="Log In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
+
     <LinearLayout
         android:id="@+id/selectAccountTypeLayout"
         android:layout_width="401dp"
@@ -16,18 +27,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38">
-
-        <Button
-            android:id="@+id/btnAdmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Admin" />
+        app:layout_constraintVertical_bias="0.81">
 
         <Button
             android:id="@+id/btnCustomer"
-            android:layout_width="wrap_content"
+            android:layout_width="103dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Customer" />
@@ -41,39 +45,56 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/OptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please select which applies to you"
+        android:text="Or\n create your awesome account now"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/selectAccountTypeLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.985" />
 
-    <LinearLayout
-        android:id="@+id/SignLogInLayout"
-        android:layout_width="261dp"
-        android:layout_height="92dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/logInTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914" />
+
+    <TextView
+        android:id="@+id/SelectAccountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select which account to create"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectAccountTypeLayout"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintVertical_bias="0.099" />
 
-        <Button
-            android:id="@+id/btnSign"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign up" />
+    <TextView
+        android:id="@+id/BroscafeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101dp"
+        android:layout_marginBottom="97dp"
+        android:text="Broscafe"
 
-        <Button
-            android:id="@+id/btnLog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log In" />
-    </LinearLayout>
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/OptionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

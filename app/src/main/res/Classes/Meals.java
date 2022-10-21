@@ -1,3 +1,5 @@
+package ca.engineering.uottawa.adam.taktek.welcomepage.Classes;
+
 public class Meals
 {
   //Instance variables ************************************************

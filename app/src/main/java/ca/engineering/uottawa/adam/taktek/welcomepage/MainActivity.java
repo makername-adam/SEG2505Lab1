@@ -18,21 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
         Intent logIntent = new Intent(getApplicationContext(), LoginActivity.class);
         Intent signIntent = new Intent(getApplicationContext(), SignUpActivity.class);
-        Intent adminSignIntent = new Intent(getApplicationContext(), AdminSignUpActivity.class);
 
-        Button buttonAdmin = (Button) findViewById(R.id.btnAdmin);
-        buttonAdmin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                accountType = "admin";
-            }
-        });
 
         Button buttonCustomer = (Button) findViewById(R.id.btnCustomer);
         buttonCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                accountType = "customer";
+                signIntent.putExtra("accountType", "customer");
+                startActivity(signIntent);
             }
         });
 
@@ -40,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         buttonCook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                accountType = "cook";
+                signIntent.putExtra("accountType","cook");
+                startActivity(signIntent);
             }
         });
 
@@ -49,20 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                logIntent.putExtra("accountType", accountType);
                 startActivity(logIntent);
-            }
-        });
-
-        Button buttonSign = (Button) findViewById(R.id.btnSign);
-        buttonSign.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (accountType.equals("admin") ){startActivity(adminSignIntent); }
-               else {
-                    signIntent.putExtra("accountType", accountType);
-                    startActivity(signIntent);
-                }
             }
         });
 

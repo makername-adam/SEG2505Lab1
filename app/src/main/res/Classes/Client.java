@@ -1,4 +1,6 @@
-public class Client extends Utilisateur 
+package ca.engineering.uottawa.adam.taktek.welcomepage.Classes;
+
+public class Client extends Utilisateur
 {
   //Instance variables ************************************************
 

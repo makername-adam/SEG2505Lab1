@@ -35,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
             boolean correctLogIn = AccountDB.checkLogIn(courriel, password);
             if (correctLogIn == true){
                 Toast.makeText(LoginActivity.this, "logIn successfull ", Toast.LENGTH_SHORT).show();
+                //String accountType = AccountDB.getAccountType(courriel);
+               // Toast.makeText(LoginActivity.this, accountType, Toast.LENGTH_SHORT).show();
 //Tachfine make startActivity here for your homepage, passing the extra accountType
 
             }else{

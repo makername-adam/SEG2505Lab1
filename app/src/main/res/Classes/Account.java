@@ -1,4 +1,6 @@
-public class Account 
+package ca.engineering.uottawa.adam.taktek.welcomepage.Classes;
+
+public class Account
 {
   //Instance variables ************************************************
 

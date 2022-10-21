@@ -13,6 +13,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SignUpActivity extends AppCompatActivity {
     AccountDBsql AccountDB;
+    String accountType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity {
         AccountDB = new AccountDBsql(this);
         //Utilisateur UserSignUp
         if(getIntent().hasExtra("accountType")){
-            String accountType = getIntent().getExtras().getString("accountType");
+            accountType = getIntent().getExtras().getString("accountType");
             if(accountType.equals("customer")){
                 //UserSignUp = new Client();
             }else if (accountType.equals("cook")){
@@ -39,25 +41,22 @@ public class SignUpActivity extends AppCompatActivity {
         enterBtn.setOnClickListener(new View.OnClickListener(){
             @Override
                 public void onClick(View view){
-                if (! courrielText.getText().toString().isEmpty() && ! passwordText.getText().toString().isEmpty()
-                        && !prenomText.getText().toString().isEmpty() && !nomText.getText().toString().isEmpty()
-                        && !addresseText.getText().toString().isEmpty()) {
-
-                    String courriel = courrielText.getText().toString();
-                    String password = passwordText.getText().toString();
-                    String prenom = prenomText.getText().toString();
-                    String nom = nomText.getText().toString();
-                    String addresse = addresseText.getText().toString();
-                    /*UserSignUp.courriel = courrielText.getText().toString();
+                String courriel = courrielText.getText().toString();
+                String password = passwordText.getText().toString();
+                String prenom = prenomText.getText().toString();
+                String nom = nomText.getText().toString();
+                String addresse = addresseText.getText().toString();
+                /*UserSignUp.courriel = courrielText.getText().toString();
                     UserSignUp.password = passwordText.getText().toString();
                     UserSignUp.prenom = prenomText.getText().toString();
                     UserSignUp.nom = nomText.getText().toString();
                     UserSignUp.addresse = addresseText.getText().toString();*/
+                if (!  courriel.isEmpty() && ! password .isEmpty() && !prenom.isEmpty() && !nom.isEmpty() && !addresse.isEmpty()) {
 
                     //save user info and launch homepage:
                     boolean accountexist=  AccountDB.checkAccountExist(courriel);
                     if (accountexist == false){
-                        boolean successRegistration = AccountDB.insertAccount(courriel, password, prenom, nom,addresse);
+                        boolean successRegistration = AccountDB.insertAccount(courriel, password, prenom, nom,addresse,"customer");//
                         if (successRegistration == false) {
                             Toast failedSignUpToast = Toast.makeText(SignUpActivity.this, "registration failed", Toast.LENGTH_SHORT);
                             View vf = failedSignUpToast.getView();
